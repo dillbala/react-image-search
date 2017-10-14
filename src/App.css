@@ -70,7 +70,7 @@
     width: 100%;
 }
 
-.imageList ul {
+.listOfImages ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -79,11 +79,11 @@
     -webkit-padding-start: 0px;
 }
 
-.imageList ul li {
+.listOfImages ul li {
     padding: 10px;
 }
 
-.imageList ul li img {
+.listOfImages ul li img {
     width: 100%;
     height: 300px;
     cursor: pointer;
@@ -123,7 +123,7 @@
 }
 
 .overlayInner img {
-    width: 600px;
+    width: 60%;
     height: 500px;
     object-fit: cover;
 }
@@ -204,6 +204,15 @@
     }
 }
 
+ul.pagination {
+    text-align: center;
+    padding-left: 0px;
+}
+
+ul.pagination li {
+    display: inline-block;
+}
+
 .pagination li {
     padding: 0px !important;
 }
@@ -237,4 +246,42 @@
 
 .pagination>li.active>a {
     background: rgba(204, 204, 204, 0.8);
+}
+
+@media screen and (max-width: 768px) {
+    .searchBox {
+        font-size: 20px;
+        padding: 0px;
+    }
+    .searchBox p {
+        padding: 5px;
+    }
+    #searchWrapper.shrink {
+        height: 15%;
+    }
+    .listOfImages ul li {
+        flex-basis: 25%;
+    }
+    .listOfImages ul li img {
+        width: 100%;
+        height: 150px;
+    }
+    ul.pagination {
+        text-align: center;
+        padding-left: 0px;
+    }
+    ul.pagination li {
+        display: inline-block;
+    }
+    .overlayInner img {
+        width: 60%;
+    }
+    .overlayInner button {
+        padding: 10px;
+    }
+    .pagination>li>a,
+    .pagination>li>span {
+        padding: 5px 9px;
+        font-size: 12px;
+    }
 }

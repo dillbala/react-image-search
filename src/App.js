@@ -60,7 +60,7 @@ class App extends Component {
     this.setState({
       isLoading:!this.state.isLoading
     }, () => {
-    axios.get(`https://api.unsplash.com/search/photos/?page=${this.state.activePage}&per_page=21&query=${search}&client_id=718cdcca99c1cf162144cd14319aef5d75d4785b2a6e8be73a4f15d37a602265`)
+    axios.get(`https://api.unsplash.com/search/photos/?page=${this.state.activePage}&per_page=21&query=${search}&client_id=fe3f64881401ddd3b4800ab386fd34f5e62ac4d2f1479b03ed3777cd0f337d00`)
     .then(image => {
       if(image.data.results.length > 0)
       {
@@ -97,7 +97,7 @@ class App extends Component {
   }
 
   componentWillMount(){
-    axios.get('https://api.unsplash.com/photos/random?client_id=718cdcca99c1cf162144cd14319aef5d75d4785b2a6e8be73a4f15d37a602265')
+    axios.get('https://api.unsplash.com/photos/random?client_id=fe3f64881401ddd3b4800ab386fd34f5e62ac4d2f1479b03ed3777cd0f337d00')
     .then(image => {
       this.setState ({
           randomImgUrl : image.data.urls.regular

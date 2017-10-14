@@ -21,19 +21,23 @@ const ImageList = (props) =>{
         imageItems = <Spinner />
     }
     return(
+        <div>
         <div className="listOfImages">
         <ul>
             {imageItems}
         </ul>
+        </div>
+        <div>
         {props.images !== null && props.images.length > 0 && !props.isLoading &&
         <Pagination
             activePage={props.activePage}
             itemsCountPerPage={21}
             totalItemsCount={props.total}
-            pageRangeDisplayed={10}
+            pageRangeDisplayed={5}
             onChange={props.handlePageChange}
         />
         }
+        </div>
         </div>
     )
 }
